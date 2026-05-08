@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+.website-container {
+    width: 90%;
+    margin: 40px auto;
+    /* border: 8px solid #9aa0a6; */
+    overflow: hidden;
+    background-color: white;
+}
+.navbar {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+    background-color: #f8f5f2;
+}
+.navleft {
+    font-family: Georgia, Times, serif;
+    font-size: 29px;
+    letter-spacing: 8px;
+    color: #222;
+}
+.navlinks {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+}
+.navlinks a {
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #333;   
+}
+.navlinks a:hover {
+    color: rgb(200, 191, 60);
+}
+.icons {
+    display: flex;
+    gap: 30px;
+}
+.cart {
+    width: 28px;
+    cursor: pointer;
+}
+.profile {
+    width: 28px;
+    cursor: pointer;
+}
+.hero {
+    height: 1200px;
+    background-image: url(tools/hair.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hero-text {
+    position: absolute;
+    top: 35%;
+    left: 6%;
+    color: white;
+}
+h4 {
+    font-size: 14px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+h5 {
+    font-size: 15px;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+.shop {
+    background-color: #2b2525;
+    color: white;
+    border: none;
+    padding: 22px 45px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.shop:hover {
+    background-color: rgb(200, 191, 60);
+}
+.philosophy {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 90px 95px;
+    background-color: #f8f6f3;
+}
+.philosophy-text {
+    width: 62%;
+}
+.philosophy-text h2 {
+    font-size: 16px;
+    letter-spacing: 6px;
+    color: #ceb383;
+    margin-bottom: 35px;
+}
+.philosophy-text h4 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+.philosophy-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #777;
+    margin-bottom: 45px;
+}
+.philosophy-text a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+.heritage:hover {
+    color: #c8a96a;
+}
+.philosophy-image {
+    width: 26%;
+}
+.philosophy-image img {
+    /* width: 100%; */
+    display: block;
+}
+.collection-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    /* margin: auto; */
+}
+.collection-header h4 {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #ceb383;
+    margin-bottom: 10px;
+    position: relative;
+    left: 50%;
+}
+.collection-header h2 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #444;
+    position: relative;
+    left: 50%;
+}
+.view-all {
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    border-bottom: 2px solid #8d3429;
+    /* padding-bottom: 4px; */
+    position: relative;
+    right: 7%;
+}
+.view-all:hover {
+    color: #b89b5e;
+}
+.products {
+    display: flex;
+    /* gap: 40px; */
+}
+.product-card {
+    width: 23%;
+    position: relative;
+    left: 5%;
+}
+.product-card img {
+    width: 84%;   
+}
+.product-card h3 {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 5px;
+}
+.product-card p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+.product-card span {
+    font-size: 15px;
+    color: #ceb383;
+}
+/* badge */
+.product-card.limited .badge {
+    position: absolute;
+    top: 10px;
+    right: 49px;
+    background-color: #b89b5e;
+    color: white;
+    font-size: 13px;
+    padding: 6px 10px;
+    letter-spacing: 1px;
+}
+.cta-section {
+    background-color: #f8f6f6;
+    padding: 80px 90px;
+}
+.cta-box {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+.cta-box h4 {
+    letter-spacing: 4px;
+    font-size: 17px;
+    color: #c8a96a;
+    /* margin-bottom: 20px; */
+}
+.cta-box h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.cta-box p {
+    font-size: 17px;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn {
+    padding: 14px 30px;
+    font-size: 15px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.btn.primary {
+    background-color: #c8a96a;
+    color: black;
+}
+.btn.primary:hover {
+    background-color: white;
+}
+.btn.outline {
+    border: 1px solid #c8a96a;
+    color: #c8a96a;
+}
+.btn.outline:hover {
+    background-color: #c8a96a;
+    color: black;
+}
+ /* footer */
+ .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 90px;
+    background-color: #f8f6f3;
+    /* gap: 60px; */
+ }
+ .footer-left {
+    width: 30%;
+ }
+ .footer-left h3 {
+    letter-spacing: 6px;
+    font-size: 20px;
+    margin-bottom: 20px;
+ }
+ .footer p {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 20px;
+ }
+ .socials {
+    display: flex;
+    gap: 18px;
+ }
+ .social-link {
+    width: 27px;
+ }
+ .footer-links {
+    display: flex;
+    gap: 60px;
+ }
+ .footer-links a {
+    display: block;
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 14px;
+    text-decoration: none;
+ }
+ .footer-links a:hover {
+    color: #c8a96a;
+ }
+ /* .footer-newsletter {
+    width: 10%;
+ } */
+ .footer-newsletter h4 {
+    font-size: 14px;
+    /* margin-bottom: 20px; */
+ }
+ .newsletter-input {
+    display: flex;
+    border-bottom: 1px solid #999;
+ }
+ .newsletter-input input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 10px 0;
+    background: transparent;
+ }
+ .newsletter-input button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+ }
+ .newsletter-input button:hover {
+    color: #b89b5e;
+ }
+ .footer-copy {
+    height: 50px;
+    margin-left: 90px;
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #888;
+ }
+ /* MEDIA RESPONSIVENESS  */
+ /* 1024 */
+ @media (max-width: 1024px) {
+    .hero {
+        height: 600px;
+    }
+    .philosophy,
+    .footer {
+        padding: 70px 50px;
+    }
+    .philosophy,
+    .philosophy-image {
+        width: 100%;
+    }
+    .products {
+        gap: 25px;
+    }
+ }
+ /* 768 */
+ @media (max-width: 768px) {
+    .website-container,
+    .shop-page, 
+    .contact-page {
+        width: 100%;
+        margin: 0;
+        border: none;
+    }
+    
+    .navbar {
+        height: auto;
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .navleft {
+        font-size: 18px;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+    .navlinks {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    
+    }
+    .icons {
+        gap: 18px;
+    }
+    .hero {
+        height: 500px;
+        background-position: center;
+    }
+    .hero-text {
+        left: 20%;
+        top: 35%;
+    }
+    .hero-text h2 {
+        font-size: 18px;
+    }
+    .philosophy {
+        flex-direction: column;
+        padding: 60px 25px;
+    }
+    .philosophy,
+    .philosophy-image {
+        width: 100%;
+    }
+     /* .philosophy-image img {
+        height: 350px;
+    }   */
+    .collection  {
+        padding: 60px 25px;
+    }
+    .product-card.limited .badge {
+        left: 20%;
+        padding: 2px 5px;
+    }
+    .cta-section {
+        padding: 60px 25px;
+    }
+    .cta-buttons {
+        flex-direction: column;
+    }
+    .footer {
+        flex-direction: column;
+        padding: 60px 25px;
+    }
+    .footer-left, 
+    .footer-newsletter {
+        width: 100%;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+    }
+    .footer-copy {
+        position: static;
+        transform: none;
+    }   
+}
+/* 480 */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    .navleft {
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+    .navlinks {
+        gap: 14px;
+    }
+    .navlinks a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+    .cart {
+        width: 18px;
+        cursor: pointer;
+    }
+    .profile {
+        width: 18px;
+        cursor: pointer;
+    }
+    .hero {
+        height:400px
+    }
+    .hero-text {
+        left: 20px;
+        top: 32%;
+    }
+    .hero-text h5 {
+        font-size: 11px;
+    }
+    .hero-text h2 {
+        font-size: 16px;
+        width: 220px;
+        line-height: 1.5;
+    }
+    .hero-text .shop {
+        padding: 14px 25px;
+        font-size: 11px;
+    }
+    .philosophy,
+    .collection-section,
+    .cta-section {
+        padding: 50px 18px;
+    }
+    .philosophy-text h2,
+    .collection-header h2 {
+        font-size: 24px;
+    }
+    .philosophy-text p {
+        font-size: 14px;
+    }
+    .philosophy-image img {
+        height: 400px;
+    }
+    .collection-header h4 {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .collection-header h2 {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .view-all {
+        font-size: 12px;
+    }
+    .product-card img {
+        width: 77%;   
+    }
+    .product-card h3 {
+        font-size: 13px;
+    }
+    .product-card p {
+        font-size: 11px;
+    }
+    .product-card span {
+        font-size: 11px;
+    }
+    /* badge */
+    .product-card.limited .badge {
+        position: absolute;
+        border: none;
+        background: none;
+        color: #c8a96a;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    .cta-box {
+        padding: 45px 20px;
+    }
+    .cta-box h2 {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+    .cta-buttons .btn {
+        /* width: 100px; */
+        text-align: center;
+    }
+    .footer {
+        padding: 50px 18px;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .footer-copy {
+        font-size: 9px;
+        text-align: center;
+    }
+}
