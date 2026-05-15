@@ -9,10 +9,8 @@ body {
 }
 .website-container {
     width: 90%;
-    margin: 40px auto;
-    /* border: 8px solid #9aa0a6; */
-    overflow: hidden;
-    background-color: white;
+    margin: 10px auto;
+    background-color: #f8f6f3;
 }
 .navbar {
     height: 90px;
@@ -27,6 +25,7 @@ body {
     font-size: 29px;
     letter-spacing: 8px;
     color: #222;
+    text-shadow: 3px 3px 10px;
 }
 .navlinks {
     display: flex;
@@ -54,9 +53,74 @@ body {
     width: 28px;
     cursor: pointer;
 }
+.icons .sidebar-logo {
+    display: none;
+    font-size: 57px;
+    color: #222;
+}
+.nav-sidebar {
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -80%;
+    z-index: 100;
+    transition: right 0.3s ease-in-out;
+}
+.nav-sidebar.active {
+     right: 0;
+}
+.close-sidebar {
+    font-size: 50px;
+    border: 1px solid #d4d3d3e5;
+    background-color: white;
+}
+.sidebarnav {
+    font-family: Georgia, Times, serif;
+    font-size: 29px;
+    letter-spacing: 8px;
+    color: #222;
+    text-align: center;
+    text-shadow: 2px 2px 5px,
+    0 0 10px rgba(255,255,255,0.3);
+    margin-bottom: 50px;
+}
+.sidebar-links a {
+    font-size: 29px;
+    font-weight: 500;
+    color: rgb(73, 71, 71);
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.sidebar-links {
+    list-style-type: none;
+}
+.medias {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+.medias img {
+    width: 50px;
+}
+ .footer-copysidebar {
+    position: absolute;
+    bottom: 50px;
+    margin-left: 90px;
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #888;
+}
 .hero {
-    height: 1200px;
-    background-image: url(tools/hair.png);
+    height: 1000px;
+    width: 100%;
+    background-image: url(tools/hair\ 2.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -67,13 +131,13 @@ body {
     left: 6%;
     color: white;
 }
-h4 {
-    font-size: 14px;
+.hero-text h4 {
+    font-size: 28px;
     margin-bottom: 25px;
     font-weight: bold;
 }
-h5 {
-    font-size: 15px;
+.hero-text h5 {
+    font-size: 25px;
     margin-bottom: 35px;
     font-weight: bold;
 }
@@ -135,7 +199,6 @@ h5 {
     width: 26%;
 }
 .philosophy-image img {
-    /* width: 100%; */
     display: block;
 }
 .collection-header {
@@ -143,7 +206,6 @@ h5 {
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 50px;
-    /* margin: auto; */
 }
 .collection-header h4 {
     font-size: 15px;
@@ -167,7 +229,6 @@ h5 {
     font-size: 16px;
     color: #555;
     border-bottom: 2px solid #8d3429;
-    /* padding-bottom: 4px; */
     position: relative;
     right: 7%;
 }
@@ -176,7 +237,6 @@ h5 {
 }
 .products {
     display: flex;
-    /* gap: 40px; */
 }
 .product-card {
     width: 23%;
@@ -184,7 +244,11 @@ h5 {
     left: 5%;
 }
 .product-card img {
-    width: 84%;   
+    width: 84%; 
+    transition: 0.4s ease;  
+}
+.product-card img:hover {
+    transform: scale(1.08);
 }
 .product-card h3 {
     font-size: 16px;
@@ -225,7 +289,6 @@ h5 {
     letter-spacing: 4px;
     font-size: 17px;
     color: #c8a96a;
-    /* margin-bottom: 20px; */
 }
 .cta-box h2 {
     font-size: 20px;
@@ -268,7 +331,6 @@ h5 {
     justify-content: space-between;
     padding: 70px 90px;
     background-color: #f8f6f3;
-    /* gap: 60px; */
  }
  .footer-left {
     width: 30%;
@@ -304,12 +366,8 @@ h5 {
  .footer-links a:hover {
     color: #c8a96a;
  }
- /* .footer-newsletter {
-    width: 10%;
- } */
  .footer-newsletter h4 {
     font-size: 14px;
-    /* margin-bottom: 20px; */
  }
  .newsletter-input {
     display: flex;
@@ -342,6 +400,10 @@ h5 {
  /* MEDIA RESPONSIVENESS  */
  /* 1024 */
  @media (max-width: 1024px) {
+    .website-container {
+        width: 90%;
+        margin: 10px auto;
+    }
     .hero {
         height: 600px;
     }
@@ -353,20 +415,23 @@ h5 {
     .philosophy-image {
         width: 100%;
     }
-    .products {
-        gap: 25px;
+     .product-card.limited .badge {
+        font-size: 11px;
+        padding: 6px 5px;
     }
  }
  /* 768 */
  @media (max-width: 768px) {
-    .website-container,
+    .website-container {
+        width: 90%;
+        margin: 35px;
+    }
     .shop-page, 
     .contact-page {
         width: 100%;
         margin: 0;
         border: none;
     }
-    
     .navbar {
         height: auto;
         padding: 25px;
@@ -374,22 +439,31 @@ h5 {
         gap: 20px;
     }
     .navleft {
-        font-size: 18px;
-        letter-spacing: 5px;
-        text-align: center;
+        font-size: 24px;
+        letter-spacing: 3px;
+        /* display: none; */
+        position: relative;
+        right: 200px;
     }
     .navlinks {
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-    
+        display: none;
     }
-    .icons {
-        gap: 18px;
+    .icons a {
+        position: relative;
+        bottom: 48px;
+        left: 80px;
     }
-    .hero {
-        height: 500px;
-        background-position: center;
+    .icons .sidebar-logo {
+        display: flex;
+        position: relative;
+        left: 230px;
+        bottom: 63px;
+        border: none;
+        background: none;
+        color: #353535;
     }
     .hero-text {
         left: 20%;
@@ -406,9 +480,6 @@ h5 {
     .philosophy-image {
         width: 100%;
     }
-     /* .philosophy-image img {
-        height: 350px;
-    }   */
     .collection  {
         padding: 60px 25px;
     }
@@ -447,42 +518,50 @@ h5 {
         gap: 15px;
     }
     .navleft {
-        font-size: 15px;
-        letter-spacing: 3px;
+        position: relative;
+        right: 100px;
     }
-    .navlinks {
-        gap: 14px;
+    .icons a {
+        position: relative;
+        bottom: 38px;
+        left: 120px;
     }
-    .navlinks a {
-        font-size: 9px;
-        letter-spacing: 1px;
+    .icons .sidebar-logo {
+        display: flex;
+        position: relative;
+        left: 130px;
+        bottom: 53px;
+        font-size: 44px;
+    }
+    .close-sidebar {
+        font-size: 40px;
+    }
+    .medias img {
+        width: 40px;
     }
     .cart {
-        width: 18px;
+        width: 20px;
         cursor: pointer;
     }
     .profile {
-        width: 18px;
+        width: 20px;
         cursor: pointer;
     }
     .hero {
         height:400px
     }
     .hero-text {
-        left: 20px;
-        top: 32%;
+        left: 50px;
     }
     .hero-text h5 {
-        font-size: 11px;
+        font-size: 12px;
     }
-    .hero-text h2 {
+    .hero-text h4 {
         font-size: 16px;
-        width: 220px;
-        line-height: 1.5;
     }
     .hero-text .shop {
         padding: 14px 25px;
-        font-size: 11px;
+        font-size: 9px;
     }
     .philosophy,
     .collection-section,
@@ -497,7 +576,8 @@ h5 {
         font-size: 14px;
     }
     .philosophy-image img {
-        height: 400px;
+        height: 380px;
+        margin: auto;
     }
     .collection-header h4 {
         font-size: 12px;
@@ -511,7 +591,7 @@ h5 {
         font-size: 12px;
     }
     .product-card img {
-        width: 77%;   
+        width: 87%; 
     }
     .product-card h3 {
         font-size: 13px;
@@ -539,7 +619,6 @@ h5 {
         line-height: 1.4;
     }
     .cta-buttons .btn {
-        /* width: 100px; */
         text-align: center;
     }
     .footer {
