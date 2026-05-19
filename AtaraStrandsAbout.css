@@ -333,6 +333,13 @@
     .hero-text2 h1 {
         font-size: 32px;
     }
+    .mission-section {
+        /* text-align: center; */
+        margin-left: 20%;
+    }
+    .mission-image {
+        width: 100%;
+    }
     .mission-section,
     .craft-top,
     .values-section,

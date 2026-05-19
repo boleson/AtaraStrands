@@ -281,6 +281,26 @@ input[type="range"] {
 }
 /* 480 */
 @media (max-width: 480px) {
+    .navbar {
+        padding: 10px 8px;
+        gap: 14px;
+    }
+    .navleft {
+        position: relative;
+        right: 85px;
+    }
+    .icons {
+        display: flex;
+        gap: 18px;
+    }
+    .icons a {
+        position: relative;
+        left: 118px;
+    }
+    .icons .sidebar-logo {
+        position: relative;
+        left: 120px;
+    }
     .search {
         width: 18px;
         cursor: pointer;
