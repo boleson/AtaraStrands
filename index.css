@@ -451,6 +451,10 @@ body {
         gap: 20px;
         display: none;
     }
+    .icons {
+        display: flex;
+        gap: 25px;
+    }
     .icons a {
         position: relative;
         bottom: 48px;
@@ -514,8 +518,8 @@ body {
 /* 480 */
 @media (max-width: 480px) {
     .navbar {
-        padding: 20px 15px;
-        gap: 15px;
+        padding: 10px 8px;
+        gap: 14px;
     }
     .navleft {
         position: relative;
@@ -524,7 +528,7 @@ body {
     .icons a {
         position: relative;
         bottom: 38px;
-        left: 120px;
+        left: 124px;
     }
     .icons .sidebar-logo {
         display: flex;
@@ -548,7 +552,9 @@ body {
         cursor: pointer;
     }
     .hero {
-        height:400px
+        height: 400px;
+        position: relative;
+        right: 10px;
     }
     .hero-text {
         left: 50px;
@@ -577,7 +583,6 @@ body {
     }
     .philosophy-image img {
         height: 380px;
-        margin: auto;
     }
     .collection-header h4 {
         font-size: 12px;
